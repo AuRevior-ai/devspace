@@ -1,9 +1,9 @@
 # DevSpace Enhanced Product and Architecture Design
 
-**Date:** 2026-08-05  
-**Status:** Approved and maintained  
-**Repository:** `AuRevior-ai/devspace`  
-**Primary development branch:** `enhanced/main`  
+**Date:** 2026-08-05
+**Status:** Approved and maintained
+**Repository:** `AuRevior-ai/devspace`
+**Primary development branch:** `enhanced/main`
 **Official baseline:** `@waishnav/devspace@1.0.5`, upstream commit `dca3b6a345a9285e63446d72376afdafe8c72af4`
 
 ## 1. Document Purpose and Authority

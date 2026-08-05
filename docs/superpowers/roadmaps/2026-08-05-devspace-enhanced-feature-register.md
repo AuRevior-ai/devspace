@@ -1,9 +1,9 @@
 # DevSpace Enhanced Feature Register
 
-**Date created:** 2026-08-05  
-**Status:** Active  
-**Repository:** `AuRevior-ai/devspace`  
-**Primary branch:** `enhanced/main`  
+**Date created:** 2026-08-05
+**Status:** Active
+**Repository:** `AuRevior-ai/devspace`
+**Primary branch:** `enhanced/main`
 **Product specification:** `../specs/2026-08-05-devspace-enhanced-product-design.md`
 
 ## 1. Purpose
@@ -78,8 +78,8 @@ created.
 
 ### BASE-001 — Official Source Fork and Reproducible Baseline
 
-**Status:** `verified`  
-**Safety class:** S1  
+**Status:** `verified`
+**Safety class:** S1
 **Phase:** 0
 
 **Goal**
@@ -117,8 +117,8 @@ None for Phase 0. Later package and cutover behavior are tracked separately.
 
 ### SHELL-001 — Explicit Nonstandard Shell Path
 
-**Status:** `verified`  
-**Safety class:** S1  
+**Status:** `verified`
+**Safety class:** S1
 **Phase:** 1
 
 **Bounded scope**
@@ -178,8 +178,8 @@ rules.
 
 ### SHELL-002 — Public Cross-Machine Shell Resolver
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 1
 
 **Goal**
@@ -229,8 +229,8 @@ entry becomes `verified`.
 
 ### POLICY-001 — Structured Command Impact Policy
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 1
 
 **Goal**
@@ -265,8 +265,8 @@ operation intent and impact classification.
 
 ### GIT-001 — Safe Git Inspection Operations
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 1
 
 **Goal**
@@ -295,8 +295,8 @@ reliable, and auditable without granting mutation permission.
 
 ### GIT-002 — Authorized Staging and Commit Workflow
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 1
 
 **Goal**
@@ -333,8 +333,8 @@ unrelated work.
 
 ### TASK-001 — Durable Task Lifecycle and Event Log
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 2/3
 
 **Goal**
@@ -372,8 +372,8 @@ queued -> running -> waiting_for_user | failed | completed
 
 ### NOTIFY-001 — Notification Adapter and Redaction Policy
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 2
 
 **Goal**
@@ -410,8 +410,8 @@ local destination identifier.
 
 ### NOTIFY-002 — Windows Notification and Local Task Destination
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 2
 
 **Goal**
@@ -443,8 +443,8 @@ local task-status surface.
 
 ### ORCH-001 — Typed Task Protocol and Domain Model Migration
 
-**Status:** `approved`  
-**Safety class:** S1  
+**Status:** `approved`
+**Safety class:** S1
 **Phase:** 3
 
 **Goal**
@@ -476,8 +476,8 @@ models.
 
 ### ORCH-002 — Scheduler, Idempotency, Locks, and Verification
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 3
 
 **Goal**
@@ -520,8 +520,8 @@ before concurrency is enabled.
 
 ### BROWSER-001 — Browser Worker Integration Boundary
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 4
 
 **Goal**
@@ -565,8 +565,8 @@ integrations/chatgpt-browser-workers/
 
 ### BROWSER-002 — Browser Session Identity and Recovery
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 4
 
 **Goal**
@@ -608,8 +608,8 @@ cross-talk or wrong-page delivery.
 
 ### CAP-001 — PoC A-D Capability Probes
 
-**Status:** `partial`  
-**Safety class:** S2  
+**Status:** `partial`
+**Safety class:** S2
 **Phase:** 4
 
 **Goal**
@@ -651,8 +651,8 @@ unsupported
 
 ### MULTI-001 — Capability-Gated Two-Worker Scheduling
 
-**Status:** `blocked`  
-**Safety class:** S2  
+**Status:** `blocked`
+**Safety class:** S2
 **Phase:** 5
 
 **Goal**
@@ -691,8 +691,8 @@ Two consecutive real acceptance cycles with no:
 
 ### PKG-001 — Fork Package Identity and Reproducible Artifact
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 6
 
 **Goal**
@@ -725,8 +725,8 @@ Produce an installable artifact clearly distinguishable from official DevSpace.
 
 ### CUTOVER-001 — Install, Health Check, and Rollback
 
-**Status:** `approved`  
-**Safety class:** S3  
+**Status:** `approved`
+**Safety class:** S3
 **Phase:** 6
 
 **Goal**
@@ -757,8 +757,8 @@ The global official package and port `7676` service remain unchanged.
 
 ### MIG-001 — Behavioral Migration from Python PoC
 
-**Status:** `approved`  
-**Safety class:** S2  
+**Status:** `approved`
+**Safety class:** S2
 **Phase:** 3-5
 
 **Goal**
@@ -795,8 +795,8 @@ Individual destination features listed above.
 
 ### POC-RETIRE-001 — Python PoC Retirement
 
-**Status:** `blocked`  
-**Safety class:** S2  
+**Status:** `blocked`
+**Safety class:** S2
 **Phase:** After 5 or 6
 
 **Goal**
