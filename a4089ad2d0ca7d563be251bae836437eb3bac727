@@ -1,0 +1,22 @@
+Shell resolver follow-up for public release
+
+Implemented in a4089ad:
+- DEVSPACE_SHELL_PATH is now shared by doctor and real shell execution.
+- Verified on a nonstandard D: drive path containing Chinese characters.
+
+Still required before claiming robust cross-machine support:
+- persisted shellPath config and precedence;
+- Git for Windows registry discovery;
+- derive Git root from git.exe on PATH;
+- normalize quoted paths and reject unstable relative paths;
+- validate candidates with bash --version and bash -c probe;
+- regression coverage for spaces, Cygwin/MSYS2, invalid executables, and legacy WSL Bash.
+
+Recommended precedence:
+1 persisted shellPath
+2 DEVSPACE_SHELL_PATH
+3 registry
+4 git.exe-derived root
+5 standard Program Files
+6 bash.exe on PATH
+7 diagnostic failure with attempted candidates
