@@ -38,6 +38,7 @@ import {
   type DevspaceUserConfig,
 } from "./user-config.js";
 import { expandHomePath } from "./roots.js";
+import { configuredShellPath } from "./shell-path.js";
 import { shutdownHttpServer } from "./server-shutdown.js";
 
 type Command = "serve" | "init" | "doctor" | "config" | "agents" | "help" | "version";
@@ -683,7 +684,7 @@ function checkGitAvailable(): string {
 
 function checkBashShell(): string {
   try {
-    const { shell, args } = getShellConfig();
+    const { shell, args } = getShellConfig(configuredShellPath());
     return `${shell} ${args.join(" ")}`;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

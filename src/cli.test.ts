@@ -19,6 +19,28 @@ for (const flag of ["-v", "--version"]) {
   assert.equal(output, packageJson.version);
 }
 
+const doctorRoot = mkdtempSync(join(tmpdir(), "devspace-cli-doctor-test-"));
+try {
+  const shellPath = join(doctorRoot, "custom-bash.exe");
+  writeFileSync(shellPath, "");
+
+  const output = execFileSync("node", ["--import", "tsx", "src/cli.ts", "doctor"], {
+    encoding: "utf8",
+    env: {
+      ...process.env,
+      DEVSPACE_CONFIG_DIR: join(doctorRoot, ".devspace"),
+      DEVSPACE_ALLOWED_ROOTS: doctorRoot,
+      DEVSPACE_OAUTH_OWNER_TOKEN: "test-owner-token-that-is-long-enough",
+      DEVSPACE_PUBLIC_BASE_URL: "http://127.0.0.1:17677",
+      DEVSPACE_SHELL_PATH: shellPath,
+    },
+  });
+
+  assert.match(output, new RegExp(`Bash shell: ${shellPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
+} finally {
+  rmSync(doctorRoot, { recursive: true, force: true });
+}
+
 const root = mkdtempSync(join(tmpdir(), "devspace-cli-agents-test-"));
 try {
   const configDir = join(root, ".devspace");
